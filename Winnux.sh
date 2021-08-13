@@ -9,8 +9,10 @@ sudo apt install git
 # Download Required Items
 wget https://png.pngitem.com/pimgs/s/49-490830_qt-release-qt-windows-10-logo-white-transparent.png
 wget https://richardtech.net/wp-content/uploads/2015/07/img0_3840x2160-1920x1024.jpg
+# fix these lines
 wget https://github.com/B00merang-Project/Windows-10/archive/refs/heads/master.zip
 mv master.zip win10theme.zip
+# fix these lines
 wget https://github.com/yeyushengfan258/We10X-icon-theme/archive/refs/heads/master.zip
 mv master.zip win10icons.zip
 wget https://download.onlyoffice.com/install/desktop/editors/linux/old/onlyoffice-desktopeditors_amd64.deb
