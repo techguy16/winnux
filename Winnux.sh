@@ -9,12 +9,10 @@ sudo apt install git
 # Download Required Items
 wget https://png.pngitem.com/pimgs/s/49-490830_qt-release-qt-windows-10-logo-white-transparent.png
 wget https://richardtech.net/wp-content/uploads/2015/07/img0_3840x2160-1920x1024.jpg
-# fix these lines
 wget https://github.com/B00merang-Project/Windows-10/archive/refs/heads/master.zip
-mv master.zip win10theme.zip
-# fix these lines
+mv Windows-10-master.zip win10theme.zip
 wget https://github.com/yeyushengfan258/We10X-icon-theme/archive/refs/heads/master.zip
-mv master.zip win10icons.zip
+mv We10X-icon-theme-master.zip win10icons.zip
 wget https://download.onlyoffice.com/install/desktop/editors/linux/old/onlyoffice-desktopeditors_amd64.deb
 wget https://dl.opendesktop.org/api/files/download/id/1460735137/155025-win8.tar.gz
 
@@ -58,6 +56,7 @@ sudo apt remove xed
 
 # Apply themes
 u="$USER"
+cd /home/$u/
 gsettings set org.gnome.desktop.background picture-uri file:////home/$u/img0_3840x2160-1920x1024.jpg
 unzip win10theme.zip
 unzip win10icons.zip
@@ -78,17 +77,17 @@ sudo dpkg --add-architecture i386
 
 # Install Apps
 sudo apt update
-sudo apt install software-properties-common apt-transport-https
-sudo apt install code
-sudo apt install mousepad
-sudo apt install microsoft-edge-dev
-sudo apt install --install-recommends winehq-stable
-sudo apt install aisleriot
+sudo apt install software-properties-common apt-transport-https -y
+sudo apt install code -y
+sudo apt install mousepad -y
+sudo apt install microsoft-edge-dev -y
+sudo apt install --install-recommends winehq-stable -y
+sudo apt install aisleriot -y
 sudo apt install evolution -y
-sudo apt install indicator-stickynotes
-sudo apt install cheese
-sudo apt install vlc
-sudo apt-get install thunderbird
+sudo apt install indicator-stickynotes -y
+sudo apt install cheese -y
+sudo apt install vlc -y
+sudo apt-get install thunderbird -y
 
 # Unpack .debs
 sudo dpkg -i onlyoffice-desktopeditors_amd64.deb
