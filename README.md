@@ -4,6 +4,8 @@
 
 May work with Debian. I'm not sure.
 
+**PLEASE** do not make any silly issue reports. Only Zero-day vulnerabilities can go there unless I file a report.
+
 Linux | Version
 ------------ | -------------
 Ubuntu 16.04 Xenial - Ubuntu 21.04 Hirsute | [1.0](https://github.com/techguy16/winnux/releases/download/1.0/Winnux_1-0.sh)
