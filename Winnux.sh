@@ -10,9 +10,9 @@ sudo apt install git
 wget https://png.pngitem.com/pimgs/s/49-490830_qt-release-qt-windows-10-logo-white-transparent.png
 wget https://richardtech.net/wp-content/uploads/2015/07/img0_3840x2160-1920x1024.jpg
 wget https://github.com/B00merang-Project/Windows-10/archive/refs/heads/master.zip
-mv Windows-10-master.zip win10theme.zip
+mv master.zip win10theme.zip
 wget https://github.com/yeyushengfan258/We10X-icon-theme/archive/refs/heads/master.zip
-mv We10X-icon-theme-master.zip win10icons.zip
+mv master.zip win10icons.zip
 wget https://download.onlyoffice.com/install/desktop/editors/linux/old/onlyoffice-desktopeditors_amd64.deb
 wget https://dl.opendesktop.org/api/files/download/id/1460735137/155025-win8.tar.gz
 
