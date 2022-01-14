@@ -9,7 +9,7 @@ May work with Debian. I'm not sure.
 * I took out the download links so I could debug the code and upload a new version
 Linux | Version
 ------------ | -------------
-Ubuntu 16.04 Xenial - Ubuntu 22.04 Jammy **Beta** | [1.0*]
-Mint 18 "Sarah" - Mint 20.3 "Una" | [1.0*]
+Ubuntu 16.04 Xenial - Ubuntu 22.04 Jammy **Beta** | 1.0*
+Mint 18 "Sarah" - Mint 20.3 "Una" | 1.0*
 
-[Download Winnux Now!*]
+Download Winnux Now!*
