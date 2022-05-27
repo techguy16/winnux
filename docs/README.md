@@ -7,8 +7,8 @@ Download the correct one for your computer:
 
 Linux | Version
 ------------ | -------------
-Ubuntu 16.04 Xenial - Ubuntu 21.04 Hirsute | [1.0](https://github.com/techguy16/winnux/releases/download/1.0/Winnux_1-0.sh)
-Mint 18 "Sarah" - Mint 20.2 "Uma" | [1.0](https://github.com/techguy16/winnux/releases/download/1.0/Winnux_1-0.sh)
+Ubuntu 16.04 Xenial - Ubuntu 22.04 "Jammy" LTS | [1.0](https://github.com/techguy16/winnux/releases/download/1.0/Winnux_1-0.sh)
+Mint 18 "Sarah" - Mint 20.3 "Una" | [1.0](https://github.com/techguy16/winnux/releases/download/1.0/Winnux_1-0.sh)
 
 When downloaded, open Terminal and navigate to the directory you downloaded the file to. Most of the time it will be as easy as  ```cd Downloads```. 
 
