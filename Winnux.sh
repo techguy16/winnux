@@ -1,14 +1,26 @@
+echo "
+░██╗░░░░░░░██╗██╗███╗░░██╗███╗░░██╗██╗░░░██╗██╗░░██╗
+░██║░░██╗░░██║██║████╗░██║████╗░██║██║░░░██║╚██╗██╔╝
+░╚██╗████╗██╔╝██║██╔██╗██║██╔██╗██║██║░░░██║░╚███╔╝░
+░░████╔═████║░██║██║╚████║██║╚████║██║░░░██║░██╔██╗░
+░░╚██╔╝░╚██╔╝░██║██║░╚███║██║░╚███║╚██████╔╝██╔╝╚██╗
+░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝
+"
+echo "Winnux 1.1 - 14th July 2022"
+echo "Made by techguy16"
+echo " "
+echo "Make your Linux PC look like Windows 10."
+sleep 5
+
 # Update Packages
 sudo apt update
 
 # Install WGet, cURL & Git
-sudo apt install wget
-sudo apt install curl
-sudo apt install git
+sudo apt install wget curl git -y
 
 # Download Required Items
 wget https://png.pngitem.com/pimgs/s/49-490830_qt-release-qt-windows-10-logo-white-transparent.png
-wget https://richardtech.net/wp-content/uploads/2015/07/img0_3840x2160-1920x1024.jpg
+wget https://wallpaperaccess.com/full/2382371.jpg ## 14.07.2022 - Changed wallpaper link
 wget https://github.com/B00merang-Project/Windows-10/archive/refs/heads/master.zip
 mv Windows-10-master.zip win10theme.zip
 wget https://github.com/yeyushengfan258/We10X-icon-theme/archive/refs/heads/master.zip
@@ -52,7 +64,7 @@ sudo add-apt-repository ppa:ubuntu-mozilla-daily/ppa
 # sudo apt remove mint-info-kde
 # sudo apt remove mint-info-mate
 # sudo apt remove mint-info-xfce
-sudo apt remove xed
+sudo apt remove xed -y
 
 # Apply themes
 u="$USER"
