@@ -6,7 +6,7 @@ echo "
 ░░╚██╔╝░╚██╔╝░██║██║░╚███║██║░╚███║╚██████╔╝██╔╝╚██╗
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝
 "
-echo "Winnux 1.1 - 14th July 2022"
+echo "Winnux 1.2-beta - 14th July 2022"
 echo "Made by techguy16"
 echo " "
 echo "Make your Linux PC look like Windows 10."
@@ -39,8 +39,14 @@ sudo apt-key add winehq.key
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
-sudo add-apt-repository ppa:umang/indicator-stickynotes
-sudo add-apt-repository ppa:ubuntu-mozilla-daily/ppa
+
+if lsb_release -d | grep -q 'Debian'; then
+  echo "Debian Detected. Passing..."
+else
+  echo "Ubuntu or Linux Mint Detected"
+  sudo add-apt-repository ppa:umang/indicator-stickynotes
+  sudo add-apt-repository ppa:ubuntu-mozilla-daily/ppa
+fi
 
 # Remove Unrequired Stuff 
 # sudo apt remove firefox
@@ -69,7 +75,8 @@ sudo apt remove xed -y
 # Apply themes
 u="$USER"
 cd /home/$u/
-gsettings set org.gnome.desktop.background picture-uri file:////home/$u/img0_3840x2160-1920x1024.jpg
+## gsettings set org.gnome.desktop.background picture-uri file:////home/$u/img0_3840x2160-1920x1024.jpg (Old Code)
+gsettings set org.gnome.desktop.background picture-uri ./2382371.jpg
 unzip win10theme.zip
 unzip win10icons.zip
 mkdir .themes
