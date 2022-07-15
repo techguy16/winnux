@@ -19,7 +19,7 @@ sudo apt update
 sudo apt install wget curl git -y
 
 # Download Required Items
-wget https://png.pngitem.com/pimgs/s/49-490830_qt-release-qt-windows-10-logo-white-transparent.png
+wget https://pnggrid.com/wp-content/uploads/2021/04/windows-10-white-logo-768x770.png
 wget https://wallpaperaccess.com/full/2382371.jpg ## 14.07.2022 - Changed wallpaper link
 wget https://github.com/B00merang-Project/Windows-10/archive/refs/heads/master.zip
 mv Windows-10-master.zip win10theme.zip
@@ -74,7 +74,8 @@ sudo apt remove xed -y
 
 # Apply themes
 u="$USER"
-cd /home/$u/
+mv windows-10-white-logo-768x770.png winnux-10.png
+sudo mv winnux-10.png /usr/share/cinnamon/theme
 ## gsettings set org.gnome.desktop.background picture-uri file:////home/$u/img0_3840x2160-1920x1024.jpg (Old Code)
 gsettings set org.gnome.desktop.background picture-uri ./2382371.jpg
 unzip win10theme.zip
