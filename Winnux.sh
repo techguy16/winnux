@@ -6,7 +6,7 @@ echo "
 ░░╚██╔╝░╚██╔╝░██║██║░╚███║██║░╚███║╚██████╔╝██╔╝╚██╗
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝
 "
-echo "Winnux 1.2-beta - 14th July 2022"
+echo "Winnux 1.2-beta2 - 8th September 2022"
 echo "Made by techguy16"
 echo " "
 echo "Make your Linux PC look like Windows 10."
@@ -43,7 +43,7 @@ sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial ma
 if lsb_release -d | grep -q 'Debian'; then
   echo "Debian Detected. Passing..."
 else
-  echo "Ubuntu or Linux Mint Detected"
+  echo "Ubuntu or Linux Mint Detected. Adding Ubuntu Repositories..."
   sudo add-apt-repository ppa:umang/indicator-stickynotes
   sudo add-apt-repository ppa:ubuntu-mozilla-daily/ppa
 fi
@@ -71,6 +71,9 @@ fi
 # sudo apt remove mint-info-mate
 # sudo apt remove mint-info-xfce
 sudo apt remove xed -y
+
+# Remove unrequired files
+sudo rm microsoft.gpg
 
 # Apply themes
 u="$USER"
@@ -100,7 +103,7 @@ sudo apt update
 sudo apt install software-properties-common apt-transport-https -y
 sudo apt install code -y
 sudo apt install mousepad -y
-sudo apt install microsoft-edge-dev -y
+sudo apt install microsoft-edge-stable -y
 sudo apt install --install-recommends winehq-stable -y
 sudo apt install aisleriot -y
 sudo apt install evolution -y
