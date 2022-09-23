@@ -6,10 +6,11 @@ echo "
 ░░╚██╔╝░╚██╔╝░██║██║░╚███║██║░╚███║╚██████╔╝██╔╝╚██╗
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝
 "
-echo "Winnux 1.2-beta2 - 8th September 2022"
+echo "Winnux 1.2-beta3 - 23rd September 2022"
 echo "Made by techguy16"
 echo " "
 echo "Make your Linux PC look like Windows 10."
+echo "Windows 11 Version - Coming Soon"
 sleep 5
 
 # Update Packages
@@ -38,7 +39,6 @@ sudo apt-key add winehq.key
 # Add New Repositories
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
-sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
 
 if lsb_release -d | grep -q 'Debian'; then
   echo "Debian Detected. Passing..."
@@ -46,6 +46,14 @@ else
   echo "Ubuntu or Linux Mint Detected. Adding Ubuntu Repositories..."
   sudo add-apt-repository ppa:umang/indicator-stickynotes
   sudo add-apt-repository ppa:ubuntu-mozilla-daily/ppa
+fi
+
+if lsb_release -d | grep -q 'Debian'; then
+  echo "Debian Detected. Adding Debian Repositories..."
+  sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/buster/winehq-buster.sources
+else
+  echo "Ubuntu or Linux Mint Detected. Adding Ubuntu Repositories..."
+  sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
 fi
 
 # Remove Unrequired Stuff 
