@@ -6,7 +6,7 @@ echo "
 ░░╚██╔╝░╚██╔╝░██║██║░╚███║██║░╚███║╚██████╔╝██╔╝╚██╗
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝
 "
-echo "Winnux 1.2-beta3 - 23rd September 2022"
+echo "Winnux 1.2-beta3 - 25rd September 2022"
 echo "Made by techguy16"
 echo " "
 echo "Make your Linux PC look like Windows 10."
@@ -94,12 +94,12 @@ unzip win10icons.zip
 mkdir .themes
 mkdir .icons
 cd We10X-icon-theme-master
-mv src We10X
-cp We10X /home/$u/.icons
+mv src we10x
+mv we10x /home/$USER/.icons
 cd ..
-cp Windows-10-master /home/$u/.themes
+mv Windows-10-master /home/$USER/.themes
 gsettings set org.gnome.desktop.interface gtk-theme "Windows-10-master"
-gsettings set org.gnome.desktop.interface icon-theme 'We10X'
+gsettings set org.gnome.desktop.interface icon-theme 'we10x'
 tar xvf 155025-win8.tar.gz
 sudo mv win8 /home/$u/.icons -v
 
