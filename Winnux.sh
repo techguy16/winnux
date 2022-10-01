@@ -6,11 +6,11 @@ echo "
 ░░╚██╔╝░╚██╔╝░██║██║░╚███║██║░╚███║╚██████╔╝██╔╝╚██╗
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝
 "
-echo "Winnux 1.2-beta3 - 25rd September 2022"
+echo "Winnux 1.2 - 2nd October 2022"
 echo "Made by techguy16"
 echo " "
 echo "Make your Linux PC look like Windows 10."
-echo "Windows 11 Version - Coming Soon"
+echo "Windows 11 Version - IN HEAVY ALPHA"
 sleep 5
 
 # Update Packages
@@ -23,9 +23,9 @@ sudo apt install wget curl git -y
 wget https://pnggrid.com/wp-content/uploads/2021/04/windows-10-white-logo-768x770.png
 wget https://wallpaperaccess.com/full/2382371.jpg ## 14.07.2022 - Changed wallpaper link
 wget https://github.com/B00merang-Project/Windows-10/archive/refs/heads/master.zip
-mv Windows-10-master.zip win10theme.zip
+mv master.zip win10theme.zip
 wget https://github.com/yeyushengfan258/We10X-icon-theme/archive/refs/heads/master.zip
-mv We10X-icon-theme-master.zip win10icons.zip
+mv master.zip win10icons.zip
 wget https://download.onlyoffice.com/install/desktop/editors/linux/old/onlyoffice-desktopeditors_amd64.deb
 wget https://dl.opendesktop.org/api/files/download/id/1460735137/155025-win8.tar.gz
 
