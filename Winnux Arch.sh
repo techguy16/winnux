@@ -35,31 +35,6 @@ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 
-
-# Remove Unrequired Stuff 
-# sudo apt remove firefox
-# sudo apt remove mint-artwork-gnome
-# sudo apt remove mint-artwork-kde
-# sudo apt remove mint-artwork-mate
-# sudo apt remove mint-artwork-xfce
-# sudo apt remove mint-backgrounds-maya
-# sudo apt remove mint-backgrounds-nadia
-# sudo apt remove mint-backgrounds-olivia
-# sudo apt remove mint-backgrounds-petra
-# sudo apt remove mint-backgrounds-qiana
-# sudo apt remove mint-backgrounds-rafaela
-# sudo apt remove mint-backgrounds-rebecca
-# sudo apt remove mint-backgrounds-retro
-# sudo apt remove mint-backgrounds-rosa
-# sudo apt remove mint-backgrounds-sarah
-# sudo apt remove mint-backgrounds-xfce
-# sudo apt remove mint-common
-# sudo apt remove mint-info-cinnamon
-# sudo apt remove mint-info-kde
-# sudo apt remove mint-info-mate
-# sudo apt remove mint-info-xfce
-sudo apt remove xed -y
-
 # Remove unrequired files
 sudo rm microsoft.gpg
 
