@@ -13,6 +13,7 @@ Debian 10 "Buster" - Debian 11 "Bullseye" | [1.1](https://github.com/techguy16/w
 
 ## Arch/Manjaro Version - *IN HEAVY ALPHA*
 You will need to Save this file yourself by right clicking and pressing "Save as..."
+
 Linux | Version
 ------------ | -------------
 Arch Linux | [1.1](https://raw.githubusercontent.com/techguy16/winnux/arch/Winnux%20Arch.sh)
@@ -28,6 +29,7 @@ After that, type ```sh Winnux.sh```. You might have to type your password. After
 
 ## Winnux 11 - Debian/Ubuntu/Mint Versions
 You will need to Save this file yourself by right clicking and pressing "Save as..."
+
 Linux | Version
 ------------ | -------------
 Ubuntu 16.04 Xenial - Ubuntu 22.10 "Kinetic" **Beta** | [0.1](https://raw.githubusercontent.com/techguy16/winnux/win11/Winnux.sh)
