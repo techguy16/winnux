@@ -109,16 +109,46 @@ sudo dpkg --add-architecture i386
 # Install Apps
 sudo apt update
 sudo apt install software-properties-common apt-transport-https -y
-sudo apt install code -y
-sudo apt install mousepad -y
-sudo apt install microsoft-edge-stable -y
-sudo apt install --install-recommends winehq-stable -y
-sudo apt install aisleriot -y
-sudo apt install evolution -y
-sudo apt install indicator-stickynotes -y
-sudo apt install cheese -y
-sudo apt install vlc -y
-sudo apt-get install thunderbird -y
+if dialog --yesno "Install Visual Studio Code?" 0 0; then
+  sudo apt install code -y
+fi
+
+if dialog --yesno "Install Mousepad?" 0 0; then
+  sudo apt install mousepad -y
+fi
+
+if dialog --yesno "Install Microsoft Edge?" 0 0; then
+  sudo apt install microsoft-edge-stable -y
+fi
+
+if dialog --yesno "Install Wine?" 0 0; then
+  sudo apt install --install-recommends winehq-stable -y
+fi
+
+if dialog --yesno "Install Aisleriot Solitaire?" 0 0; then
+  sudo apt install --install-recommends aisleriot -y
+fi
+
+if dialog --yesno "Install Evolution?" 0 0; then
+  sudo apt install --install-recommends evolution -y
+fi
+
+if dialog --yesno "Install StickyNotes (Not on Debian)?" 0 0; then
+  sudo apt install --install-recommends indicator-stickynotes -y
+fi
+
+if dialog --yesno "Install StickyNotes (Not on Debian)?" 0 0; then
+  sudo apt install cheese -y
+fi
+
+if dialog --yesno "Install VLC?" 0 0; then
+  sudo apt install vlc -y
+fi
+
+if dialog --yesno "Install Thunderbird?" 0 0; then
+  sudo apt-get install thunderbird -y
+fi
+
 
 # Unpack .debs
 sudo dpkg -i onlyoffice-desktopeditors_amd64.deb
