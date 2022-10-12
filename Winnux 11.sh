@@ -21,10 +21,10 @@ sudo apt install wget curl git -y
 # Download Required Items
 wget https://pnggrid.com/wp-content/uploads/2021/04/windows-10-white-logo-768x770.png
 wget https://wallpaperaccess.com/full/2382371.jpg ## 14.07.2022 - Changed wallpaper link
-wget https://github.com/B00merang-Project/Windows-10/archive/refs/heads/master.zip
-mv Windows-10-master.zip win10theme.zip
-wget https://github.com/yeyushengfan258/We10X-icon-theme/archive/refs/heads/master.zip
-mv We10X-icon-theme-master.zip win10icons.zip
+wget https://github.com/B00merang-Project/Windows-10/archive/refs/heads/main.zip
+mv main.zip win11theme.zip
+wget https://github.com/yeyushengfan258/Win11-icon-theme/archive/refs/heads/main.zip
+mv main.zip win11icons.zip
 wget https://download.onlyoffice.com/install/desktop/editors/linux/old/onlyoffice-desktopeditors_amd64.deb
 wget https://dl.opendesktop.org/api/files/download/id/1460735137/155025-win8.tar.gz
 
@@ -88,8 +88,8 @@ mv windows-10-white-logo-768x770.png winnux-10.png
 sudo mv winnux-10.png /usr/share/cinnamon/theme
 ## gsettings set org.gnome.desktop.background picture-uri file:////home/$u/img0_3840x2160-1920x1024.jpg (Old Code)
 gsettings set org.gnome.desktop.background picture-uri ./2382371.jpg
-unzip win10theme.zip
-unzip win10icons.zip
+unzip win11theme.zip
+unzip win11icons.zip
 mkdir .themes
 mkdir .icons
 cd We10X-icon-theme-master
