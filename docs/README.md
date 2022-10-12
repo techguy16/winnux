@@ -6,9 +6,9 @@ There is no better way to make your Linux Computer look like Windows 10than Winn
 
 Linux | Version
 ------------ | -------------
-Ubuntu 16.04 Xenial - Ubuntu 22.10 "Kinetic" **Beta** | [1.2](https://github.com/techguy16/winnux/releases/download/1.2/Winnux.sh)
-Mint 18 "Sarah" - Mint 21 "Vanessa" | [1.2](https://github.com/techguy16/winnux/releases/download/1.2/Winnux.sh)
-Debian 10 "Buster" - Debian 11 "Bullseye" | [1.2](https://github.com/techguy16/winnux/releases/download/1.2/Winnux.sh)
+Ubuntu 16.04 Xenial - Ubuntu 22.10 "Kinetic" **Beta** | [1.2.1](https://github.com/techguy16/winnux/releases/download/1.2.1/Winnux.sh)
+Mint 18 "Sarah" - Mint 21 "Vanessa" | [1.2.1](https://github.com/techguy16/winnux/releases/download/1.2.1/Winnux.sh)
+Debian 10 "Buster" - Debian 11 "Bullseye" | [1.2.1](https://github.com/techguy16/winnux/releases/download/1.2.1/Winnux.sh)
   
 
 ## Arch/Manjaro Version - *IN HEAVY ALPHA*
