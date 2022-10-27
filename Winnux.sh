@@ -109,6 +109,7 @@ sudo dpkg --add-architecture i386
 # Install Apps
 sudo apt update
 sudo apt install software-properties-common apt-transport-https -y
+
 sudo apt install code -y
 sudo apt install mousepad -y
 sudo apt install microsoft-edge-stable -y
@@ -118,7 +119,20 @@ sudo apt install evolution -y
 sudo apt install indicator-stickynotes -y
 sudo apt install cheese -y
 sudo apt install vlc -y
-sudo apt-get install thunderbird -y
+sudo apt install thunderbird -y
+
+# Repeat JUST IN CASE...
+sudo apt install code -y
+sudo apt install mousepad -y
+sudo apt install microsoft-edge-stable -y
+sudo apt install --install-recommends winehq-stable -y
+sudo apt install aisleriot -y
+sudo apt install evolution -y
+sudo apt install indicator-stickynotes -y
+sudo apt install cheese -y
+sudo apt install vlc -y
+sudo apt install thunderbird -y
+
 
 
 # Unpack .debs
