@@ -6,7 +6,7 @@ echo "
 ░░╚██╔╝░╚██╔╝░██║██║░╚███║██║░╚███║╚██████╔╝██╔╝╚██╗
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝
 "
-echo "Winnux 1.2.1 - 13th October 2022"
+echo "Winnux 1.3.0 beta1 - 13th October 2022"
 echo "Made by techguy16"
 echo " "
 echo "Make your Linux PC look like Windows 10."
