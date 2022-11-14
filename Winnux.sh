@@ -6,11 +6,10 @@ echo "
 ░░╚██╔╝░╚██╔╝░██║██║░╚███║██║░╚███║╚██████╔╝██╔╝╚██╗
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝
 "
-echo "Winnux 1.2 - 2nd October 2022"
+echo "Winnux 2.0  Alpha 1 - 15th November 2022"
 echo "Made by techguy16"
 echo " "
-echo "Make your Linux PC look like Windows 10."
-echo "Windows 11 Version - IN HEAVY ALPHA"
+echo "Make your Linux PC look like Windows 11 (kinda). Windows 11 Version - IN HEAVY ALPHA"
 sleep 5
 
 # Update Packages
@@ -22,10 +21,10 @@ sudo apt install wget curl git -y
 # Download Required Items
 wget https://pnggrid.com/wp-content/uploads/2021/04/windows-10-white-logo-768x770.png
 wget https://wallpaperaccess.com/full/2382371.jpg ## 14.07.2022 - Changed wallpaper link
-wget https://github.com/B00merang-Project/Windows-10/archive/refs/heads/master.zip
-mv master.zip win10theme.zip
-wget https://github.com/yeyushengfan258/We10X-icon-theme/archive/refs/heads/master.zip
-mv master.zip win10icons.zip
+wget https://github.com/B00merang-Project/Windows-10/archive/refs/heads/main.zip
+mv Windows-10-main.zip win10theme.zip
+wget https://github.com/yeyushengfan258/We10X-icon-theme/archive/refs/heads/main.zip
+mv We10X-icon-theme-main.zip win10icons.zip
 wget https://download.onlyoffice.com/install/desktop/editors/linux/old/onlyoffice-desktopeditors_amd64.deb
 wget https://dl.opendesktop.org/api/files/download/id/1460735137/155025-win8.tar.gz
 
@@ -53,32 +52,11 @@ if lsb_release -d | grep -q 'Debian'; then
   sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/buster/winehq-buster.sources
 else
   echo "Ubuntu or Linux Mint Detected. Adding Ubuntu Repositories..."
-  sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
+  sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main' # Sorry - Wine for Xenial just for compatibility 
 fi
 
 # Remove Unrequired Stuff 
-# sudo apt remove firefox
-# sudo apt remove mint-artwork-gnome
-# sudo apt remove mint-artwork-kde
-# sudo apt remove mint-artwork-mate
-# sudo apt remove mint-artwork-xfce
-# sudo apt remove mint-backgrounds-maya
-# sudo apt remove mint-backgrounds-nadia
-# sudo apt remove mint-backgrounds-olivia
-# sudo apt remove mint-backgrounds-petra
-# sudo apt remove mint-backgrounds-qiana
-# sudo apt remove mint-backgrounds-rafaela
-# sudo apt remove mint-backgrounds-rebecca
-# sudo apt remove mint-backgrounds-retro
-# sudo apt remove mint-backgrounds-rosa
-# sudo apt remove mint-backgrounds-sarah
-# sudo apt remove mint-backgrounds-xfce
-# sudo apt remove mint-common
-# sudo apt remove mint-info-cinnamon
-# sudo apt remove mint-info-kde
-# sudo apt remove mint-info-mate
-# sudo apt remove mint-info-xfce
-sudo apt remove xed -y
+# Just saying - add stuff that you don't want after Winnux has been run
 
 # Remove unrequired files
 sudo rm microsoft.gpg
@@ -95,60 +73,101 @@ mkdir .themes
 mkdir .icons
 cd We10X-icon-theme-master
 mv src we10x
-mv we10x /home/$USER/.icons
+mv we10x $HOME/.icons
 cd ..
-mv Windows-10-master /home/$USER/.themes
+mv Windows-10-master $HOME/.themes
 gsettings set org.gnome.desktop.interface gtk-theme "Windows-10-master"
 gsettings set org.gnome.desktop.interface icon-theme 'we10x'
 tar xvf 155025-win8.tar.gz
-sudo mv win8 /home/$u/.icons -v
+sudo mv win8 $HOME/.icons -v
 
 # Fix Architecture Problems (with Wine)
 sudo dpkg --add-architecture i386 
 
 # Install Apps
-sudo apt update
-sudo apt install software-properties-common apt-transport-https -y
+sudo apt update > /dev/null
+sudo apt install software-properties-common apt-transport-https -y > /dev/null
 if dialog --yesno "Install Visual Studio Code?" 0 0; then
-  sudo apt install code -y
+  echo "Installing Visual Studio Code..."
+  sudo apt install code -y > /dev/null
 fi
 
 if dialog --yesno "Install Mousepad?" 0 0; then
-  sudo apt install mousepad -y
+  echo "Installing Mousepad..."
+  sudo apt install mousepad -y > /dev/null
 fi
 
 if dialog --yesno "Install Microsoft Edge?" 0 0; then
-  sudo apt install microsoft-edge-stable -y
+  echo "Installing Microsoft Edge..."
+  sudo apt install microsoft-edge-stable -y > /dev/null
 fi
 
 if dialog --yesno "Install Wine?" 0 0; then
-  sudo apt install --install-recommends winehq-stable -y
+  echo "Installing Wine Stable..."
+  sudo apt install --install-recommends winehq-stable -y > /dev/null
 fi
 
 if dialog --yesno "Install Aisleriot Solitaire?" 0 0; then
-  sudo apt install --install-recommends aisleriot -y
+  echo "Installing Aisleriot Solitaire..."
+  sudo apt install --install-recommends aisleriot -y > /dev/null
 fi
 
 if dialog --yesno "Install Evolution?" 0 0; then
-  sudo apt install --install-recommends evolution -y
+  echo "Installing Evolution..."
+  sudo apt install --install-recommends evolution -y > /dev/null
 fi
 
-if dialog --yesno "Install StickyNotes (Not on Debian)?" 0 0; then
-  sudo apt install --install-recommends indicator-stickynotes -y
+if lsb_release -d | grep -q 'Debian'; then
+  echo "Debian Detected. Passing StickyNotes..."
+else
+  echo "Ubuntu or Linux Mint Detected. Adding Ubuntu Repositories..."
+  if dialog --yesno "Install StickyNotes?" 0 0; then
+    echo "Installing StickyNotes..."
+    sudo apt install --install-recommends indicator-stickynotes -y > /dev/null
+  fi
 fi
 
-if dialog --yesno "Install StickyNotes (Not on Debian)?" 0 0; then
-  sudo apt install cheese -y
+if dialog --yesno "Install Cheese?" 0 0; then
+  echo "Installing GNOME Cheese..."
+  sudo apt install cheese -y > /dev/null
 fi
 
 if dialog --yesno "Install VLC?" 0 0; then
-  sudo apt install vlc -y
+  echo "Installing VLC Media Player..."
+  sudo apt install vlc -y > /dev/null
 fi
 
 if dialog --yesno "Install Thunderbird?" 0 0; then
-  sudo apt-get install thunderbird -y
+  echo "Installing Mozilla Thunderbird..."
+  sudo apt-get install thunderbird -y > /dev/null
 fi
+cmd=(dialog --keep-tite --menu "Select options:" 22 76 16)
 
+options=(1 "Thunderbird"
+         2 "Evolution")
+
+choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
+
+for choice in $choices
+do
+    case $choice in
+        1)
+            echo "First Option"
+            ;;
+        2)
+            echo "Second Option"
+            ;;
+        3)
+            echo "Third Option"
+            ;;
+        4)
+            echo "Fourth Option"
+            ;;
+    esac
+done
 
 # Unpack .debs
-sudo dpkg -i onlyoffice-desktopeditors_amd64.deb
+if dialog --yesno "Install ONLYOFFICE Desktop Editors?" 0 0; then
+  echo "Installing ONLYOFFICE Desktop Editors..."
+  sudo dpkg -i onlyoffice-desktopeditors_amd64.deb > /dev/null
+fi
