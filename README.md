@@ -2,7 +2,6 @@
 
 ##### Make Linux Mint, Ubuntu, or Debian (With the Cinnamon DE) look like Windows 10 using one terminal script.
 
-I will start a GitHub Wiki Soon with Info and other stuff about Winnux.
 
 ### Compatibility (Stable)
 Linux | Version
