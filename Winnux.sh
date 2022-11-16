@@ -12,6 +12,30 @@ echo " "
 echo "Make your Linux PC look like Windows 11 (kinda). Windows 11 Version - IN HEAVY ALPHA"
 sleep 5
 
+
+echo "Winnux 2.x is buggy. Don't use it unless you are trying it."
+echo "Are you sure you want to use it?"
+select os in Yes No
+do
+
+case $os in
+# Two case values are declared here for matching
+"Yes")
+echo "Continuing..."
+;;
+# Three case values are declared here for matching
+"No")
+echo "exiting winnux 2.0"
+exit 0
+;;
+# Matching with invalid data
+*)
+echo "Invalid entry."
+break
+;;
+esac
+done
+
 # Update Packages
 sudo apt update
 
