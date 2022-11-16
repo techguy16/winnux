@@ -1,4 +1,4 @@
-# Winnux Website
+# Winnux
 Welcome to the official Winnux Website.
 ### Versions:
 - [Winnux](https://techguy16.github.io/winnux/Winnux)
