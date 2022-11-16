@@ -27,7 +27,7 @@ mv Windows-10-master.zip win10theme.zip
 wget https://github.com/yeyushengfan258/We10X-icon-theme/archive/refs/heads/master.zip
 mv We10X-icon-theme-master.zip win10icons.zip
 git clone https://aur.archlinux.org/onlyoffice-bin.git
-git clone https://aur.archlinux.org/microsoft-edge-stable.git
+git clone https://aur.archlinux.org/microsoft-edge-stable-bin.git
 wget https://dl.opendesktop.org/api/files/download/id/1460735137/155025-win8.tar.gz
 
 # Add required keys
@@ -70,7 +70,7 @@ yes | sudo pacman -S vlc
 yes | sudo pacman -S thunderbird
 
 # Compile and install Microsoft Edge
-cd microsoft-edge-stable
+cd microsoft-edge-stable-bin
 makepkg -si
 cd ..
 
