@@ -19,14 +19,19 @@ sudo apt update
 sudo apt install wget curl git -y
 
 # Download Required Items
+
+# Menu Ucon
 wget https://pnggrid.com/wp-content/uploads/2021/04/windows-10-white-logo-768x770.png
+
+# Wallpaper
 wget https://wallpaperaccess.com/full/2382371.jpg ## 14.07.2022 - Changed wallpaper link
-wget https://github.com/B00merang-Project/Windows-10/archive/refs/heads/main.zip
-mv Windows-10-main.zip win10theme.zip
-wget https://github.com/yeyushengfan258/We10X-icon-theme/archive/refs/heads/main.zip
-mv We10X-icon-theme-main.zip win10icons.zip
-wget https://download.onlyoffice.com/install/desktop/editors/linux/old/onlyoffice-desktopeditors_amd64.deb
-wget https://dl.opendesktop.org/api/files/download/id/1460735137/155025-win8.tar.gz
+
+wget https://github.com/B00merang-Project/Windows-10/archive/refs/heads/main.zip # Theme
+mv Windows-10-main.zip win10theme.zip # Rename theme file
+wget https://github.com/yeyushengfan258/We10X-icon-theme/archive/refs/heads/main.zip # Icons
+mv We10X-icon-theme-main.zip win10icons.zip # Rename Icon file
+wget https://download.onlyoffice.com/install/desktop/editors/linux/old/onlyoffice-desktopeditors_amd64.deb # ONLYOFFICE EDITORS deb file
+wget https://dl.opendesktop.org/api/files/download/id/1460735137/155025-win8.tar.gz  # Cursors
 
 # Add required keys
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
