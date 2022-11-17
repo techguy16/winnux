@@ -2,15 +2,12 @@
 
 ## Supported Versions
 
-1.2.x will be supported until Winnux 2.0.x is released
+Fedora will get Version 1.0.x then will get Version 2.x so I don't have to maintain different versions 😃
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.3.x (Beta)   | ✅ |
-| 1.2.x   | :white_check_mark: |
-| 1.1.x   | :x:                |
-| 1.0.x   | :x: |
-| < 1.0   | :x:                |
+| 1.0-alpha1   | ✅ |
+
 
 ## Reporting a Vulnerability
 
