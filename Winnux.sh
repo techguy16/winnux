@@ -55,6 +55,7 @@ mv Windows-10-main.zip win10theme.zip # Rename theme file
 wget https://github.com/yeyushengfan258/We10X-icon-theme/archive/refs/heads/main.zip # Icons
 mv We10X-icon-theme-main.zip win10icons.zip # Rename Icon file
 wget https://download.onlyoffice.com/install/desktop/editors/linux/old/onlyoffice-desktopeditors_amd64.deb # ONLYOFFICE EDITORS deb file
+wget https://github.com/PowerShell/PowerShell/releases/download/v7.3.0/powershell_7.3.0-1.deb_amd64.deb # PowerShell
 wget https://dl.opendesktop.org/api/files/download/id/1460735137/155025-win8.tar.gz  # Cursors
 
 # Add required keys
@@ -199,4 +200,8 @@ done
 if dialog --yesno "Install ONLYOFFICE Desktop Editors?" 0 0; then
   echo "Installing ONLYOFFICE Desktop Editors..."
   sudo dpkg -i onlyoffice-desktopeditors_amd64.deb > /dev/null
+fi
+if dialog --yesno "Install PowerShell Core?" 0 0; then
+  echo "Installing PowerShell Core..."
+  sudo dpkg -i powershell_7.3.0-1.deb_amd64.deb > /dev/null
 fi
