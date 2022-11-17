@@ -56,13 +56,13 @@ mkdir .themes
 mkdir .icons
 cd We10X-icon-theme-master
 mv src we10x
-mv we10x /usr/share/icons
+sudo mv we10x /usr/share/icons
 cd ..
-mv Windows-10-master /usr/share/themes
+sudo mv Windows-10-master /usr/share/themes
 gsettings set org.gnome.desktop.interface gtk-theme "Windows-10-master"
 gsettings set org.gnome.desktop.interface icon-theme 'we10x'
 tar xvf 155025-win8.tar.gz
-sudo mv win8 /home/$u/.icons -v
+sudo mv win8 /usr/share/icons -v
 
 # Fix Architecture Problems (with Wine)
 
