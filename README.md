@@ -1,18 +1,11 @@
-## Winnux
+## Winnux Fedora
 
-##### Make Linux Mint, Ubuntu, or Debian (With the Cinnamon DE) look like Windows 10 using one terminal script.
+##### Make Fedora, Red Hat Enterprise Linux or CentOS (With the Cinnamon DE) look like Windows 10 using one terminal script.
 
-
-### Compatibility (Stable)
+### Compatibility (ALPHA)
 Linux | Version
 ------------ | -------------
-Ubuntu 16.04 Xenial - Ubuntu 22.10 Kinetic | 1.2.1
-Mint 18 "Sarah" - Mint 21 "Vanessa" | 1.2.1
-Debian 10 "Buster" - Debian 11 "Bullseye" | 1.2.1
-
-### Compatibility (Beta)
-Linux | Version
------------- | -------------
-Ubuntu 16.04 Xenial - Ubuntu 22.10 Kinetic | 1.2-beta-2
-Mint 18 "Sarah" - Mint 21 "Vanessa" | 1.2-beta-2
-Debian 10 "Buster" - Debian 11 "Bullseye" | 1.2-beta-2
+Fedora 35 - Fedora 37 | 1.0-alpha1
+RHEL 8 - RHEL 9 | 1.0-alpha1
+CentOS Linux 7 | 1.0-alpha1
+CentOS Stream 8 - CentOS Stream 9 | 1.0-alpha1
