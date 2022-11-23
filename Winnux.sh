@@ -142,11 +142,6 @@ if dialog --yesno "Install Aisleriot Solitaire?" 0 0; then
   sudo apt install --install-recommends aisleriot -y > /dev/null
 fi
 
-if dialog --yesno "Install Evolution?" 0 0; then
-  echo "Installing Evolution..."
-  sudo apt install --install-recommends evolution -y > /dev/null
-fi
-
 if lsb_release -d | grep -q 'Debian'; then
   echo "Debian Detected. Passing StickyNotes..."
 else
@@ -167,11 +162,7 @@ if dialog --yesno "Install VLC?" 0 0; then
   sudo apt install vlc -y > /dev/null
 fi
 
-if dialog --yesno "Install Thunderbird?" 0 0; then
-  echo "Installing Mozilla Thunderbird..."
-  sudo apt-get install thunderbird -y > /dev/null
-fi
-cmd=(dialog --keep-tite --menu "Select options:" 22 76 16)
+cmd=(dialog --keep-tite --menu "Select your preferred email client:" 22 76 16)
 
 options=(1 "Thunderbird"
          2 "Evolution")
@@ -182,16 +173,12 @@ for choice in $choices
 do
     case $choice in
         1)
-            echo "First Option"
+            echo "Installing Mozilla Thunderbird..."
+            sudo apt-get install thunderbird -y > /dev/null
             ;;
         2)
-            echo "Second Option"
-            ;;
-        3)
-            echo "Third Option"
-            ;;
-        4)
-            echo "Fourth Option"
+            echo "Installing GNOME Evolution..."
+            sudo apt install --install-recommends evolution -y > /dev/null
             ;;
     esac
 done
