@@ -7,34 +7,62 @@ echo "
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝
 "
 echo "Winnux 2.0  Alpha 1 - 28th November 2022"
+echo "Winnux 2.x is buggy. Don't use it unless you are trying it."
 echo "Made by techguy16"
 echo " "
 echo "Make your Linux PC look like Windows 11 (kinda). Windows 11 Version - IN HEAVY ALPHA"
 sleep 5
 
-
-echo "Winnux 2.x is buggy. Don't use it unless you are trying it."
-echo "Are you sure you want to use it?"
-select os in Yes No
-do
-
-case $os in
-# Two case values are declared here for matching
-"Yes")
-echo "Continuing..."
-;;
-# Three case values are declared here for matching
-"No")
-echo "exiting winnux 2.0"
-exit 0
-;;
-# Matching with invalid data
-*)
-echo "Invalid entry."
-break
-;;
-esac
-done
+if lsb_release -d | grep -q 'Debian'; then
+  echo "Debian Detected. Checking Version..."
+  if [ lsb_release -d | grep -q 'Debian GNU/Linux 11' ]; then
+     echo "You have Debian 11 - Bullseye"
+  elif [ lsb_release -d | grep -q 'Debian GNU/Linux 10' ]; then
+     echo "You have Debian 10 - Buster"
+  else
+     echo "Your Version of Debian is either too old or is not currently supported. Winnux will still continue."
+  fi
+elif lsb_release -d | grep -q 'Ubuntu'; then
+  echo "Ubuntu Detected. Checking Version..."
+  if [ lsb_release -d | grep -q '16.04' ]; then
+     echo "You have Ubuntu 16.04 LTS - Xenial"
+  elif [ lsb_release -d | grep -q '18.04' ]; then
+     echo "You have Ubuntu 18.04 - Bionic"
+  elif [ lsb_release -d | grep -q '20.04' ]; then
+     echo "You have Ubuntu 20.04 - Focal"
+  elif [ lsb_release -d | grep -q '22.04' ]; then
+     echo "You have Ubuntu 22.04 - Jammy"
+  else
+     echo "Your Version of Ubuntu is either too old or is not currently supported. Winnux will still continue"
+  fi
+elif lsb_release -d | grep -q 'Linux Mint'; then
+  echo "Linux Mint Detected. Checking Version..."
+  if [ lsb_release -d | grep -q '18' ]; then
+     echo "You have Linux Mint 18 - Based on Xenial"
+  elif [ lsb_release -d | grep -q '19' ]; then
+     echo "You have Linux Mint 19 - Based on Bionic"
+  elif [ lsb_release -d | grep -q '20' ]; then
+     echo "You have Linux Mint 20 - Based on Focal"
+  elif [ lsb_release -d | grep -q '21' ]; then
+     echo "You have Linux Mint 21 - Based on Jammy"
+  else
+     echo "Your Version of Linux Mint is either too old or is not currently supported. Winnux will still continue."
+  fi
+elif lsb_release -d | grep -q 'Pop!_OS'; then
+  echo "Pop!_OS Detected. Checking Version..."
+  elif [ lsb_release -d | grep -q '18.04' ]; then
+     echo "You have Pop!_OS 18.04 - Based on Bionic"
+  elif [ lsb_release -d | grep -q '20.04' ]; then
+     echo "You have Pop!_OS 20.04 - Based on Focal"
+  elif [ lsb_release -d | grep -q '22.04' ]; then
+     echo "You have Pop!_OS 22.04 - Based on Jammy"
+  else
+     echo "Your Version of Pop!_OS is either too old or is not currently supported. Winnux will still continue."
+  fi
+else
+  echo "Sorry, your distro is not supported by either Winnux. Winnux will continue, but the script may not work correctly."
+fi
+sleep 4
 
 # Update Packages
 sudo apt update
@@ -122,6 +150,20 @@ elif lsb_release -d | grep -q 'Linux Mint'; then
   else
      echo "Your Version of Linux Mint is either too old or is not currently supported."
   fi
+elif lsb_release -d | grep -q 'Pop!_OS'; then
+  echo "Pop!_OS Detected. Adding Ubuntu Repositories..."
+  elif [ lsb_release -d | grep -q '18.04' ]; then
+     echo "You have Pop!_OS 18.04 - Based on Bionic"
+     sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+  elif [ lsb_release -d | grep -q '20.04' ]; then
+     echo "You have Pop!_OS 20.04 - Based on Focal"
+     sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
+  elif [ lsb_release -d | grep -q '22.04' ]; then
+     echo "You have Pop!_OS 22.04 - Based on Jammy"
+     sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ jammy main'
+  else
+     echo "Your Version of Pop!_OS is either too old or is not currently supported."
+  fi
 else
   echo "Sorry, your distro is not supported by either Winnux or Wine."
 fi
@@ -153,7 +195,7 @@ tar xvf 155025-win8.tar.gz
 sudo mv win8 $HOME/.icons -v
 
 # Fix Architecture Problems (with Wine)
-sudo dpkg --add-architecture i386 
+sudo dpkg --add-architecture i386 # ONLY if your system is not i386/486/586/686 - Even though all modern processors support i386, this is still required (for some strange reason, that I have no clue about)
 
 # Install Apps
 sudo apt update > /dev/null
