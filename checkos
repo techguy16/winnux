@@ -1,0 +1,49 @@
+if lsb_release -d | grep -q 'Debian'; then
+echo "Debian Detected. Checking Version..."
+if lsb_release -d | grep -q 'Debian GNU/Linux 11'; then
+   echo "You have Debian 11 - Bullseye"
+elif lsb_release -d | grep -q 'Debian GNU/Linux 10'; then
+   echo "You have Debian 10 - Buster"
+else
+   echo "Your Version of Debian is either too old or is not currently supported. Winnux will still continue."
+fi
+elif lsb_release -d | grep -q 'Ubuntu'; then
+echo "Ubuntu Detected. Checking Version..."
+if lsb_release -d | grep -q '16.04'; then
+   echo "You have Ubuntu 16.04 LTS - Xenial"
+elif lsb_release -d | grep -q '18.04'; then
+   echo "You have Ubuntu 18.04 - Bionic"
+elif lsb_release -d | grep -q '20.04'; then
+   echo "You have Ubuntu 20.04 - Focal"
+elif lsb_release -d | grep -q '22.04'; then
+   echo "You have Ubuntu 22.04 - Jammy"
+else
+   echo "Your Version of Ubuntu is either too old or is not currently supported. Winnux will still continue"
+fi
+elif lsb_release -d | grep -q 'Linux Mint'; then
+echo "Linux Mint Detected. Checking Version..."
+if lsb_release -d | grep -q '18'; then
+   echo "You have Linux Mint 18 - Based on Xenial"
+elif lsb_release -d | grep -q '19'; then
+   echo "You have Linux Mint 19 - Based on Bionic"
+elif lsb_release -d | grep -q '20'; then
+   echo "You have Linux Mint 20 - Based on Focal"
+elif lsb_release -d | grep -q '21'; then
+   echo "You have Linux Mint 21 - Based on Jammy"
+else
+   echo "Your Version of Linux Mint is either too old or is not currently supported. Winnux will still continue."
+fi
+elif lsb_release -d | grep -q 'Pop!_OS'; then
+echo "Pop!_OS Detected. Checking Version..."
+elif lsb_release -d | grep -q '18.04'; then
+   echo "You have Pop!_OS 18.04 - Based on Bionic"
+elif lsb_release -d | grep -q '20.04'; then
+   echo "You have Pop!_OS 20.04 - Based on Focal"
+elif lsb_release -d | grep -q '22.04'; then
+   echo "You have Pop!_OS 22.04 - Based on Jammy"
+else
+   echo "Your Version of Pop!_OS is either too old or is not currently supported. Winnux will still continue."
+	fi
+else
+   echo "Unsupported OS."
+fi
