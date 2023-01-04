@@ -6,7 +6,7 @@ echo "
 ░░╚██╔╝░╚██╔╝░██║██║░╚███║██║░╚███║╚██████╔╝██╔╝╚██╗
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝
 "
-echo "Winnux 2.0  Alpha 1 - 28th November 2022"
+echo "Winnux 2.0  Alpha 2 - 5th January 2023"
 echo "Winnux 2.x is buggy. Don't use it unless you are trying it."
 echo "Made by techguy16"
 echo " "
@@ -33,11 +33,11 @@ wget https://wallpaperaccess.com/full/2382371.jpg ## 14.07.2022 - Changed wallpa
 
 wget https://github.com/B00merang-Project/Windows-10/archive/refs/heads/main.zip # Theme
 mv Windows-10-main.zip win10theme.zip # Rename theme file
-wget https://github.com/yeyushengfan258/We10X-icon-theme/archive/refs/heads/main.zip # Icons
+wget https://github.com/B00merang-Artwork/Windows-10/archive/refs/heads/master.zip # Icons
 mv We10X-icon-theme-main.zip win10icons.zip # Rename Icon file
 wget https://download.onlyoffice.com/install/desktop/editors/linux/old/onlyoffice-desktopeditors_amd64.deb # ONLYOFFICE EDITORS deb file
 wget https://github.com/PowerShell/PowerShell/releases/download/v7.3.0/powershell_7.3.0-1.deb_amd64.deb # PowerShell
-wget https://dl.opendesktop.org/api/files/download/id/1460735137/155025-win8.tar.gz  # Cursors
+wget https://raw.githubusercontent.com/techguy16/files-for-projects/main/winnux-files/155025-win8.tar.tar # 05.01.2023 - Old link not working, new link
 
 # Add required keys
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
@@ -137,14 +137,13 @@ unzip win10theme.zip
 unzip win10icons.zip
 mkdir .themes
 mkdir .icons
-cd We10X-icon-theme-master
-mv src we10x
-mv we10x $HOME/.icons
+mv Windows-10-master win10icons
+mv win10icons /usr/share/icons
 cd ..
 mv Windows-10-master $HOME/.themes
 gsettings set org.gnome.desktop.interface gtk-theme "Windows-10-master"
-gsettings set org.gnome.desktop.interface icon-theme 'we10x'
-tar xvf 155025-win8.tar.gz
+gsettings set org.gnome.desktop.interface icon-theme 'win10icons'
+tar xvf 155025-win8.tar.tar
 sudo mv win8 $HOME/.icons -v
 
 # Fix Architecture Problems (with Wine)
