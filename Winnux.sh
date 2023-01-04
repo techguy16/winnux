@@ -6,7 +6,7 @@ echo "
 ░░╚██╔╝░╚██╔╝░██║██║░╚███║██║░╚███║╚██████╔╝██╔╝╚██╗
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝
 "
-echo "Winnux 1.3.0 beta1 - 13th October 2022"
+echo "Winnux 1.3.0 beta2 - 5th January 2023"
 echo "Made by techguy16"
 echo " "
 echo "Make your Linux PC look like Windows 10."
@@ -24,10 +24,10 @@ wget https://pnggrid.com/wp-content/uploads/2021/04/windows-10-white-logo-768x77
 wget https://wallpaperaccess.com/full/2382371.jpg ## 14.07.2022 - Changed wallpaper link
 wget https://github.com/B00merang-Project/Windows-10/archive/refs/heads/master.zip
 mv master.zip win10theme.zip
-wget https://github.com/yeyushengfan258/We10X-icon-theme/archive/refs/heads/master.zip
+wget https://github.com/B00merang-Artwork/Windows-10/archive/refs/heads/master.zip
 mv master.zip win10icons.zip
 wget https://download.onlyoffice.com/install/desktop/editors/linux/old/onlyoffice-desktopeditors_amd64.deb
-wget https://dl.opendesktop.org/api/files/download/id/1460735137/155025-win8.tar.gz
+wget https://raw.githubusercontent.com/techguy16/files-for-projects/main/winnux-files/155025-win8.tar.tar # 05.01.2023 - Old link not working, new link
 
 # Add required keys
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
@@ -93,14 +93,13 @@ unzip win10theme.zip
 unzip win10icons.zip
 mkdir .themes
 mkdir .icons
-cd We10X-icon-theme-master
-mv src we10x
-mv we10x /usr/share/icons
+mv Windows-10-master win10icons
+mv win10icons /usr/share/icons
 cd ..
 mv Windows-10-master /usr/share/themes
 gsettings set org.gnome.desktop.interface gtk-theme "Windows-10-master"
-gsettings set org.gnome.desktop.interface icon-theme 'we10x'
-tar xvf 155025-win8.tar.gz
+gsettings set org.gnome.desktop.interface icon-theme 'win10icons'
+tar xvf 155025-win8.tar.tar
 sudo mv win8 /home/$u/.icons -v
 
 # Fix Architecture Problems (with Wine)
@@ -122,16 +121,17 @@ sudo apt install vlc -y
 sudo apt install thunderbird -y
 
 # Repeat JUST IN CASE...
-sudo apt install code -y
-sudo apt install mousepad -y
-sudo apt install microsoft-edge-stable -y
-sudo apt install --install-recommends winehq-stable -y
-sudo apt install aisleriot -y
-sudo apt install evolution -y
-sudo apt install indicator-stickynotes -y
-sudo apt install cheese -y
-sudo apt install vlc -y
-sudo apt install thunderbird -y
+# 05.01.2023 Don't need it - just because.
+# sudo apt install code -y
+# sudo apt install mousepad -y
+# sudo apt install microsoft-edge-stable -y
+# sudo apt install --install-recommends winehq-stable -y
+# sudo apt install aisleriot -y
+# sudo apt install evolution -y
+# sudo apt install indicator-stickynotes -y
+# sudo apt install cheese -y
+# sudo apt install vlc -y
+# sudo apt install thunderbird -y
 
 
 
