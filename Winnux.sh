@@ -6,11 +6,11 @@ echo "
 ░░╚██╔╝░╚██╔╝░██║██║░╚███║██║░╚███║╚██████╔╝██╔╝╚██╗
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝
 "
-echo "Winnux 1.3.0 beta2 - 5th January 2023"
+echo "Winnux 1.3.0 - 7th January 2023"
 echo "Made by techguy16"
 echo " "
 echo "Make your Linux PC look like Windows 10."
-echo "Windows 11 Version - IN HEAVY ALPHA"
+echo "FINAL 1.x Major Release!"
 sleep 5
 
 # Update Packages
@@ -40,45 +40,19 @@ sudo apt-key add winehq.key
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
 
-if lsb_release -d | grep -q 'Debian'; then
-  echo "Debian Detected. Passing..."
-else
-  echo "Ubuntu or Linux Mint Detected. Adding Ubuntu Repositories..."
-  sudo add-apt-repository ppa:umang/indicator-stickynotes
-  sudo add-apt-repository ppa:ubuntu-mozilla-daily/ppa
-fi
-
+# 07.01.2023 Simplify adding repositories
 if lsb_release -d | grep -q 'Debian'; then
   echo "Debian Detected. Adding Debian Repositories..."
   sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/buster/winehq-buster.sources
 else
   echo "Ubuntu or Linux Mint Detected. Adding Ubuntu Repositories..."
-  sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
+  sudo add-apt-repository --yes ppa:umang/indicator-stickynotes
+  sudo add-apt-repository --yes ppa:ubuntu-mozilla-daily/ppa
+  sudo add-apt-repository --yes 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
 fi
 
 # Remove Unrequired Stuff 
-# sudo apt remove firefox
-# sudo apt remove mint-artwork-gnome
-# sudo apt remove mint-artwork-kde
-# sudo apt remove mint-artwork-mate
-# sudo apt remove mint-artwork-xfce
-# sudo apt remove mint-backgrounds-maya
-# sudo apt remove mint-backgrounds-nadia
-# sudo apt remove mint-backgrounds-olivia
-# sudo apt remove mint-backgrounds-petra
-# sudo apt remove mint-backgrounds-qiana
-# sudo apt remove mint-backgrounds-rafaela
-# sudo apt remove mint-backgrounds-rebecca
-# sudo apt remove mint-backgrounds-retro
-# sudo apt remove mint-backgrounds-rosa
-# sudo apt remove mint-backgrounds-sarah
-# sudo apt remove mint-backgrounds-xfce
-# sudo apt remove mint-common
-# sudo apt remove mint-info-cinnamon
-# sudo apt remove mint-info-kde
-# sudo apt remove mint-info-mate
-# sudo apt remove mint-info-xfce
-sudo apt remove xed -y
+# Add your own stuff.
 
 # Remove unrequired files
 sudo rm microsoft.gpg
