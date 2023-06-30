@@ -6,7 +6,7 @@ echo "
 ░░╚██╔╝░╚██╔╝░██║██║░╚███║██║░╚███║╚██████╔╝██╔╝╚██╗
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝
 "
-echo "Winnux 1.3.0 - 7th January 2023"
+echo "Winnux 1.3.1 - 1st July 2023"
 echo "Made by techguy16"
 echo " "
 echo "Make your Linux PC look like Windows 10."
@@ -71,8 +71,10 @@ mv Windows-10-master win10icons
 mv win10icons /usr/share/icons
 cd ..
 mv Windows-10-master /usr/share/themes
-gsettings set org.gnome.desktop.interface gtk-theme "Windows-10-master"
-gsettings set org.gnome.desktop.interface icon-theme 'win10icons'
+gsettings set org.cinnamon.desktop.interface clock-show-date true
+gsettings set org.cinnamon.theme name "Windows-10-master"
+gsettings set org.cinnamon.desktop.wm.preferences theme "Windows-10-master"
+gsettings set org.cinnamon.desktop.interface icon-theme 'win10icons'
 tar xvf 155025-win8.tar.tar
 sudo mv win8 /home/$u/.icons -v
 
