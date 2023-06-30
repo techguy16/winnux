@@ -6,7 +6,7 @@ echo "
 ░░╚██╔╝░╚██╔╝░██║██║░╚███║██║░╚███║╚██████╔╝██╔╝╚██╗
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝
 "
-echo "Winnux 2.0  Alpha 2 - 5th January 2023"
+echo "Winnux 2.0  Alpha 3 - 1st July 2023"
 echo "Winnux 2.x is buggy. Don't use it unless you are trying it."
 echo "Made by techguy16"
 echo " "
@@ -141,8 +141,10 @@ mv Windows-10-master win10icons
 mv win10icons /usr/share/icons
 cd ..
 mv Windows-10-master $HOME/.themes
-gsettings set org.gnome.desktop.interface gtk-theme "Windows-10-master"
-gsettings set org.gnome.desktop.interface icon-theme 'win10icons'
+gsettings set org.cinnamon.desktop.interface clock-show-date true
+gsettings set org.cinnamon.theme name "Windows-10-master"
+gsettings set org.cinnamon.desktop.wm.preferences theme "Windows-10-master"
+gsettings set org.cinnamon.desktop.interface icon-theme 'win10icons'
 tar xvf 155025-win8.tar.tar
 sudo mv win8 $HOME/.icons -v
 
