@@ -1,3 +1,6 @@
+> [!IMPORTANT]  
+> This is no longer the Security Policy. Please see the main (`2.0`) branch for the latest SECURITY.md.
+
 # Security Policy
 
 ## Supported Versions
