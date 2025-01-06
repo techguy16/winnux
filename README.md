@@ -1,3 +1,6 @@
+## If you came here from the Devuan forums...
+See [here](https://github.com/techguy16/winnux/discussions/13)
+
 ## Winnux 2.0
 
 ##### Make Linux Mint, Ubuntu, Pop!_OS, or Debian (With the Cinnamon DE) look like Windows 10/11 using one terminal script.
